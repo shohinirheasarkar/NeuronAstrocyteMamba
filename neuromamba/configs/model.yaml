@@ -1,0 +1,11 @@
+ d_model: 128          # total latent dimension
+ d_fast: 64            # fast stream dimension (must be < d_model)
+ d_slow: 64            # slow stream dimension (d_fast + d_slow = d_model)
+ d_state: 16           # SSM state dimension
+ d_conv: 4             # local conv kernel size in Mamba block
+ expand: 2             # expansion factor for Mamba inner dim
+ n_layers: 4           # number of stacked Mamba layers in the encoder
+ lag_window: 10        # number of past timesteps used as source keys
+ entmax_alpha: 1.5     # sparsity level for α-entmax (1=softmax, 2=hardmax)
+ decoder_hidden: 128   # hidden size of reconstruction decoder MLP
+
